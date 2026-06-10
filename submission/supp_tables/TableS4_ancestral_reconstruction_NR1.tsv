@@ -1,0 +1,6 @@
+codon_site	motif_position	ancestral_codon	ancestral_AA	codon_posterior	AA_posterior
+755	1	CCT	P	0.757	1.000
+756	2	GGG	G	0.999	1.000
+757	3	CAG	Q	0.998	1.000
+758	4	CTC	L	0.998	1.000
+759	5	CCG	P	0.997	0.999

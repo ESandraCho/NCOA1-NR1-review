@@ -1,0 +1,52 @@
+Clade	Species	Common name	NCOA1 accession	Database
+Outgroup	Alligator mississippiensis	alligator	XM_019483799.2	NCBI RefSeq
+Outgroup	Anolis carolinensis	anole	ENSACAT00000000794	Ensembl
+Outgroup	Bufo bufo	toad	XM_040427134.1	NCBI RefSeq
+Outgroup	Chelonia mydas	sea turtle	XM_037893819.2	NCBI RefSeq
+Outgroup	Chrysemys picta	painted turtle	XM_042848887.2	NCBI RefSeq
+Outgroup	Crocodylus porosus	saltwater crocodile	XM_019537226.1	NCBI RefSeq
+Outgroup	Gallus gallus	chicken	ENSGALT00010025906	Ensembl
+Outgroup	Geotrypetes seraphini	caecilian	XM_033939870.1	NCBI RefSeq
+Outgroup	Latimeria chalumnae	coelacanth	XM_064555445.1	NCBI RefSeq
+Outgroup	Pelodiscus sinensis	softshell turtle	XM_075923297.1	NCBI RefSeq
+Outgroup	Podarcis muralis	wall lizard	XM_028725220.2	NCBI RefSeq
+Outgroup	Python bivittatus	Burmese python	XM_025170420.1	NCBI RefSeq
+Outgroup	Rana temporaria	common frog	XM_040348118.1	NCBI RefSeq
+Outgroup	Sceloporus undulatus	fence lizard	XM_042463653.1	NCBI RefSeq
+Outgroup	Thamnophis elegans	garter snake	XM_032216694.1	NCBI RefSeq
+Outgroup	Xenopus tropicalis	frog	NM_001112912.1	NCBI RefSeq
+Monotreme	Ornithorhynchus anatinus	platypus	ENSOANT00000059926	Ensembl
+Monotreme	Tachyglossus aculeatus	echidna	XM_038770843.1	NCBI RefSeq
+Marsupial	Dromiciops gliroides	monito del monte	XM_043981971.1	NCBI RefSeq
+Marsupial	Monodelphis domestica	opossum	ENSMODT00000030584	Ensembl
+Marsupial	Petaurus breviceps papuanus	sugar glider	XM_069071982.1	NCBI RefSeq
+Marsupial	Phascolarctos cinereus	koala	ENSPCIT00000041933	Ensembl
+Marsupial	Sarcophilus harrisii	Tasmanian devil	ENSSHAT00000026079	Ensembl
+Marsupial	Trichosurus vulpecula	brushtail possum	XM_036748135.1	NCBI RefSeq
+Marsupial	Vombatus ursinus	wombat	ENSVURT00010001488	Ensembl
+Eutherian	Bos taurus	cow	ENSBTAT00000064008	Ensembl
+Eutherian	Canis lupus familiaris	dog	ENSCAFT00845043605	Ensembl
+Eutherian	Cavia porcellus	guinea pig	XM_063231459.1	NCBI RefSeq
+Eutherian	Dasypus novemcinctus	armadillo	ENSDNOT00000009945	Ensembl
+Eutherian	Echinops telfairi	tenrec	ENSETET00000013376	Ensembl
+Eutherian	Equus caballus	horse	ENSECAT00000117626	Ensembl
+Eutherian	Erinaceus europaeus	hedgehog	ENSEEUT00000011191	Ensembl
+Eutherian	Felis catus	cat	ENSFCTT00005022831	Ensembl
+Eutherian	Heterocephalus glaber	naked mole-rat	XM_004839447.3	NCBI RefSeq
+Eutherian	Homo sapiens	human	ENST00000348332	Ensembl
+Eutherian	Loxodonta africana	elephant	ENSLAFT00000014443	Ensembl
+Eutherian	Macaca mulatta	macaque	ENSMMUT00000104480	Ensembl
+Eutherian	Manis javanica	pangolin	XM_073215778.1	NCBI RefSeq
+Eutherian	Mesocricetus auratus	hamster	XM_040730922.1	NCBI RefSeq
+Eutherian	Mus musculus	mouse	ENSMUST00000085814	Ensembl
+Eutherian	Oryctolagus cuniculus	rabbit	ENSOCUT00000015424	Ensembl
+Eutherian	Pan troglodytes	chimpanzee	ENSPTRT00000021820	Ensembl
+Eutherian	Pteropus vampyrus	fruit bat	ENSPVAT00000017511	Ensembl
+Eutherian	Rattus norvegicus	rat	ENSRNOT00000110405	Ensembl
+Eutherian	Sorex araneus	shrew	ENSSART00000014422	Ensembl
+Eutherian	Sus scrofa	pig	ENSSSCT00000039793	Ensembl
+Eutherian	Trichechus manatus	manatee	XM_004377565.2	NCBI RefSeq
+Eutherian	Tursiops truncatus	dolphin	ENSTTRT00000015122	Ensembl
+
+Note
+	All 48 NCOA1 accessions are verified by sequence (recorded at collection or recovered by exact CDS- or protein-sequence match to the archived alignment). Pipeline CDS have the terminal stop codon removed and are enforced to codon frame, so they are 3 nt shorter than the source RefSeq/Ensembl CDS; protein translations are identical to the cited records.

@@ -1,0 +1,4 @@
+branch	rate_classes	LRT	corrected_p	omega_classes
+Node84 (monotreme stem)	2	8.469	0.0101	omega=0.231 (p=0.882); omega=4.863 (p=0.118)
+Ornithorhynchus_anatinus	2	49.187	2.02e-11	omega=0.285 (p=0.985); omega=321.245 (p=0.015)
+Tachyglossus_aculeatus	1	0.000	1	omega=0.068 (p=1.000)

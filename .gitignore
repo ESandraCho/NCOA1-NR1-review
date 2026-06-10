@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS / editor
+.DS_Store
+*~
+.idea/
+.vscode/
+
+# transient script scratch (figures/values are regenerated from committed data)
+*.log

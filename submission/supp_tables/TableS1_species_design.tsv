@@ -1,0 +1,14 @@
+Species composition
+Outgroup (16)	Latimeria chalumnae (coelacanth), Geotrypetes seraphini (caecilian), Xenopus tropicalis (clawed frog), Rana temporaria (common frog), Bufo bufo (toad), Chelonia mydas (green sea turtle), Chrysemys picta (painted turtle), Pelodiscus sinensis (softshell turtle), Gallus gallus (chicken), Anolis carolinensis (anole), Podarcis muralis (wall lizard), Sceloporus undulatus (fence lizard), Python bivittatus (Burmese python), Thamnophis elegans (garter snake), Crocodylus porosus (saltwater crocodile), Alligator mississippiensis (alligator)
+Monotremes (2)	Ornithorhynchus anatinus (platypus), Tachyglossus aculeatus (echidna)
+Marsupials (7)	Monodelphis domestica (opossum), Sarcophilus harrisii (Tasmanian devil), Phascolarctos cinereus (koala), Vombatus ursinus (wombat), Trichosurus vulpecula (brushtail possum), Dromiciops gliroides (monito del monte), Petaurus breviceps papuanus (sugar glider)
+Eutherians (23)	Homo sapiens (human), Pan troglodytes (chimpanzee), Macaca mulatta (macaque), Mus musculus (mouse), Rattus norvegicus (rat), Cavia porcellus (guinea pig), Mesocricetus auratus (hamster), Heterocephalus glaber (naked mole-rat), Oryctolagus cuniculus (rabbit), Canis lupus familiaris (dog), Felis catus (cat), Equus caballus (horse), Bos taurus (cow), Sus scrofa (pig), Tursiops truncatus (dolphin), Loxodonta africana (elephant), Dasypus novemcinctus (armadillo), Erinaceus europaeus (hedgehog), Sorex araneus (shrew), Pteropus vampyrus (fruit bat), Echinops telfairi (tenrec), Trichechus manatus (manatee), Manis javanica (pangolin)
+
+Total	48 species (16 outgroup, 2 monotreme, 7 marsupial, 23 eutherian)
+
+Analysis design
+Alignment & tree	Unified 48-species NCOA1 codon alignment (MAFFT L-INS-i) and IQ-TREE gene tree; all analyses below were run on this single set.
+aBSREL / BUSTED / Contrast-FEL	Branch- and clade-level selection tests; the monotreme stem and the two monotreme terminal branches (platypus, echidna) were set as the test (foreground) branches.
+FUBAR	Site-level pervasive selection across the alignment.
+Ancestral reconstruction	codeml (RateAncestor=1) marginal codon reconstruction at the monotreme stem node.
+Genome assemblies	Monotreme NCOA1 — platypus: assembly mOrnAna1.p.v1 (GCA_004115215.2); echidna: assembly mTacAcu1.pri (GCF_015852505.1), NCBI Annotation Release 100. Per-species transcript accessions are listed in Table S2.
