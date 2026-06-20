@@ -197,7 +197,7 @@ def panel_c(ax):
         return gc(s)
 
     # Classify EVERY species in the alignment by clade (explicit membership sets so the
-    # assignment is reproducible and reviewer-auditable). Marsupials + placentals shown
+    # assignment is reproducible). Marsupials + placentals shown
     # separately rather than lumped as "Therians" — uses all 48 species, none dropped.
     MONOTREMES = {"Ornithorhynchus_anatinus", "Tachyglossus_aculeatus"}
     MARSUPIALS = {"Monodelphis_domestica", "Sarcophilus_harrisii", "Dromiciops_gliroides",

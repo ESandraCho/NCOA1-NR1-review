@@ -2338,7 +2338,7 @@
     }
   },
  "input":{
-   "file name":"/home/sandra/Code/mammary_niche_evolution/papers/paper_ncoa1_hormone_switch/analysis/runs_48sp/NCOA1_48sp_aln.fasta",
+   "file name":"analysis/runs_48sp/NCOA1_48sp_aln.fasta",
    "number of sequences":48,
    "number of sites":1766,
    "partition count":1,

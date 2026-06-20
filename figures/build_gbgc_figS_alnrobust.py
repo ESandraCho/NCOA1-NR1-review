@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 """
-gBGC paper — VERIFICATION (not a figure): the PGQLP-for-LVQLL replacement is alignment-robust.
+VERIFICATION (not a figure): the PGQLP-for-LVQLL replacement is alignment-robust.
 
-This result is reported as text in the manuscript (Methods/Results), not as a supplementary figure
-— the informational content is a single statement ("the call is identical across three alignment
-methods"), so it does not warrant a panel. This script is the reproducible check behind that claim:
-it re-aligns the NCOA1 proteins under three independent MAFFT regimes — L-INS-i
+This is the reproducible check that the NR1 call does not depend on alignment method. It re-aligns
+the NCOA1 proteins under three independent MAFFT regimes — L-INS-i
 (--localpair --maxiterate 1000), the FFT-NS-2 default (--retree 2), and a high gap-open penalty
 (--op 3.0) — and prints the NR1 column for human and the two monotremes. The motif is LVQLL (human)
 and PGQLP (both monotremes) in all three regimes, confirming the disruption is not an alignment

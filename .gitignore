@@ -1,13 +1,8 @@
-# Python
 __pycache__/
 *.pyc
-*.pyo
-
-# OS / editor
+*.FUBAR.cache
 .DS_Store
-*~
-.idea/
-.vscode/
-
-# transient script scratch (figures/values are regenerated from committed data)
-*.log
+# generated figure outputs (regenerate by running the build scripts)
+figures/*.pdf
+figures/*.png
+figures/*.svg

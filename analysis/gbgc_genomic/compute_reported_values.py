@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
 """
-Reproduce every prose-reported gBGC value that is NOT already emitted by a figure script.
+Compute the gBGC values reported in text (those not already emitted by a figure script):
+genomic-tract GC / percentile / CpG o/e, NR1-region amino-acid composition and disorder
+fractions, monotreme-stem W->S substitution counts and Fisher's exact test, NR1 site-level
+FUBAR/Contrast-FEL status, and platypus-echidna identities. All are recomputed from the
+committed data and printed to stdout; build_gbgc_fig3.py imports the same functions.
 
-Before this script existed, the genomic-tract numbers (Fig 2b,c), the NR1-region
-amino-acid composition / disorder fractions, and the monotreme-stem W->S substitution
-counts (Fig 3a) lived only as hand-typed numbers in `gBGC_genomic_event_NR1.md` and were
-hard-coded into `figures/build_gbgc_fig3.py`. This recomputes them from the committed data
-so the manuscript's "every reported value has a script" claim holds and the numbers are
-reviewer-auditable.
-
-Inputs (paths relative to papers/paper_ncoa1_hormone_switch/):
-  - analysis/gbgc_genomic/{platypus,echidna,human,chicken}_NCOA1_genomic.fasta  (genomic loci)
-  - analysis/outgroups_48sp/NCOA1_48sp_codon_aln.fasta                           (codon alignment)
-  - analysis/runs_48sp/asr/rst                                                   (codeml ASR)
+Inputs (paths relative to the repository root):
+  - analysis/gbgc_genomic/*_NCOA1_genomic.fasta             (genomic loci)
+  - analysis/outgroups_48sp/NCOA1_48sp_codon_aln.fasta      (codon alignment)
+  - analysis/runs_48sp/asr/rst                              (codeml ASR)
+  - analysis/runs_48sp/NCOA1_48sp_{fubar,contrast_fel}.json (HyPhy site-level results)
 
 Run:  python analysis/gbgc_genomic/compute_reported_values.py
 """
@@ -102,7 +100,7 @@ def genomic_metrics(sp):
     if off is None:
         return None
     # window the locus to ~26 kb centred on the motif so the locus mean / percentile are
-    # comparable across species (some fetched loci are longer; matches manuscript "~26-kb").
+    # comparable across species (some fetched loci are longer; ~26-kb window).
     HALF = 13000
     s0 = max(0, off - HALF)
     seq = seq[s0:off + HALF]
@@ -253,8 +251,8 @@ def stem_nr1_motif(stem=92):
 
 def ws_counts(parent=91, stem=92, flank=12):
     """Return (nonsyn_WS, nonsyn_SW, syn_WS, syn_SW) on the monotreme-stem branch over the
-    NR1 +/-flank-codon window. This is the single canonical computation; the figure and the
-    manuscript both read these numbers so they cannot drift apart."""
+    NR1 +/-flank-codon window. Single canonical computation; the figure script imports this
+    so the reported counts cannot drift apart."""
     nodes = parse_rst_nodes()
     if parent not in nodes or stem not in nodes:
         raise RuntimeError(f"nodes {parent}/{stem} not in rst (have {min(nodes)}-{max(nodes)})")

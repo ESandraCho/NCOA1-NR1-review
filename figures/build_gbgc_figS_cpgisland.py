@@ -38,15 +38,15 @@ from compute_reported_values import orient_and_find  # noqa: E402
 
 # (display label, file key, clade colour).
 PANEL = [
-    ("frog (amphibian)", "frog", "#8BC34A"),
-    ("anole (reptile)", "anole", "#7E57C2"),
-    ("turtle (reptile)", "turtle", "#7E57C2"),
-    ("crocodile (reptile)", "crocodile", "#7E57C2"),
+    ("Western clawed frog (amphibian)", "frog", "#8BC34A"),
+    ("green anole (reptile)", "anole", "#7E57C2"),
+    ("green sea turtle (reptile)", "turtle", "#7E57C2"),
+    ("saltwater crocodile (reptile)", "crocodile", "#7E57C2"),
     ("chicken (bird)", "chicken", "#7E57C2"),
     ("platypus (monotreme)", "platypus", COL_NR1),
     ("echidna (monotreme)", "echidna", COL_NR1),
-    ("opossum (marsupial)", "opossum", "#26A69A"),
-    ("devil (marsupial)", "devil", "#26A69A"),
+    ("gray short-tailed opossum (marsupial)", "opossum", "#26A69A"),
+    ("Tasmanian devil (marsupial)", "devil", "#26A69A"),
     ("human (placental)", "human", "#42A5F5"),
 ]
 def oe_cpg(s):

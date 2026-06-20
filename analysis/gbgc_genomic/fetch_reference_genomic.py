@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 """
-Fetch homologous NCOA1 *genomic* loci (intron-containing) for a therian (human) and
-reptiles (chicken, anole) so Fig 2 panels a/b can show the monotreme GC peak /
-tract-beyond-exon is monotreme-SPECIFIC, not an amniote-wide feature of the locus.
+Fetch homologous NCOA1 *genomic* loci (intron-containing) across a phylogenetic panel so the
+monotreme NR1 GC peak / CpG-island enrichment can be placed against an amniote-wide background.
 
-NCOA1 is a large gene (280-340 kb), so we don't fetch the whole locus. We locate the
-NR1 exon by its coding motif (the conserved LVQLL...; in monotremes PGQLP) and fetch a
-~26 kb window centered on it, matching the monotreme genomic windows. GC profiles are
-then directly comparable across clades at the same locus position.
+NCOA1 is a large gene (280-340 kb), so the whole locus is not fetched. The NR1 exon is located by
+its coding motif (the conserved LVQLL; PGQLP in monotremes) and a ~26 kb window is taken centred on
+it, matching the monotreme genomic windows, so GC profiles are comparable across clades at the same
+locus position.
 
 Strategy per species:
   1. esummary(gene) -> chromosome accession + gene span (GenomicInfo).
-  2. efetch the full gene region (padded), 6-frame scan for the NR1 peptide to find the
-     exon, then re-window +/-13 kb around it.
-Outputs: analysis/gbgc_genomic/{human,chicken,anole}_NCOA1_genomic.fasta
+  2. efetch the full gene region, 6-frame scan for the NR1 peptide to find the exon, then re-window
+     +/-13 kb around it.
+Outputs: {species}_NCOA1_genomic.fasta (one per species in SPECIES, below).
+
+NCBI Entrez requires a contact email. Set ENTREZ_EMAIL in your environment before running.
 """
 import os
 import time
@@ -21,7 +22,6 @@ from pathlib import Path
 from Bio import Entrez, SeqIO
 from Bio.Seq import Seq
 
-# NCBI Entrez requires a contact email. Set ENTREZ_EMAIL in your environment before running.
 Entrez.email = os.environ.get("ENTREZ_EMAIL", "your.email@example.com")
 OUT = Path(__file__).resolve().parent
 

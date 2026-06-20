@@ -29,7 +29,7 @@ OUT = Path(__file__).resolve().parent
 COL_NR1 = "#E53935"
 
 # Pull the plotted numbers from the single canonical computation so the figure and the
-# manuscript prose cannot drift apart (previously these were hard-coded in this file).
+# reported values cannot drift apart (previously these were hard-coded in this file).
 sys.path.insert(0, str(OUT.parent / "analysis" / "gbgc_genomic"))
 from compute_reported_values import ws_counts, platypus_echidna_identities  # noqa: E402
 
